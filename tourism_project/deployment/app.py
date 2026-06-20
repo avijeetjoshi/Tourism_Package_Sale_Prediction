@@ -85,10 +85,11 @@ numberoftrips = st.number_input(
     value=2
 )
 
-passport = st.selectbox(
+passport_option = st.selectbox(
     "Passport Available",
-    [0, 1]
+    ["No", "Yes"]
 )
+passport = 1 if passport_option == "Yes" else 0
 
 pitchsatisfactionscore = st.slider(
     "Pitch Satisfaction Score",
@@ -97,10 +98,11 @@ pitchsatisfactionscore = st.slider(
     value=3
 )
 
-owncar = st.selectbox(
+owncar_option = st.selectbox(
     "Owns a Car",
-    [0, 1]
+    ["No", "Yes"]
 )
+owncar = 1 if owncar_option == "Yes" else 0
 
 numberofchildrenvisiting = st.number_input(
     "Number of Children Visiting",
